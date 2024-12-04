@@ -19,9 +19,11 @@ app.use(express.json());
 // Routes
 const indexRouter = require('./routes/index')
 const authorRouter = require('./routes/authors')
+const bookRouter = require('./routes/books')
 
 app.use('/', indexRouter)
 app.use('/authors', authorRouter)
+app.use('/books', bookRouter)
 
 // Mongoose Connection
 mongoose.connect(process.env.DATABASE_URL)
